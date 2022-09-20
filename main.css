@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    /*## Colors
+    ### Primary*/
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    /* ### Neutral*/
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    width: 100vw;
+    height: 100vw;
+    margin: 4rem 0 0 0;
+    overflow: hidden;
+}
+
+header picture {
+    position: absolute;
+    top: 0; 
+    left: 0;
+}
+
+footer picture {
+    position: absolute;
+    bottom: 0; 
+    right: 0;
+}
+
+.container {
+    max-width: calc(100vw - 14rem);
+    margin: 0 auto;
+    background-color: var(--White);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container > div:not(.profiles) {
+    width: 50%;
+}
+
+.container .text h1 {
+    width: 70%;
+    font-size: 46px;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+}
+
+.container .text p {
+    width: 65%;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--Dark-Grayish-Magenta);
+}
+
+.container .rating > div{
+    width: 72%;
+    padding: .3rem 2rem;
+    margin: 1rem 0;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+    background-color: var(--Light-Grayish-Magenta);
+}
+
+.container .rating > div:nth-child(2) {
+    margin-left: 3rem;
+}
+
+.container .rating > div:last-child {
+    margin-left: 6rem;
+}
+
+.container .rating > div img {
+    display: block;
+    margin-right: .5rem;
+}
+
+.container .rating > div p {
+    margin-left: 2rem;
+}
+
+.container .profiles {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.container .profiles .irene {
+    margin-top: 1rem;
+}
+
+.container .profiles .anne {
+    margin-top: 2rem;
+}
+
+.container .profiles > div  {
+    width: 21rem;
+    padding: 2rem 1.5rem 1rem 2rem;
+    height:13rem;
+    background-color: var(--Very-Dark-Magenta);
+    margin-right: 2rem;
+    border-radius: .5rem;
+}
+
+.container .profiles > div div {
+    display: flex;
+    align-items: center;
+
+}
+
+.container .profiles > div div img {
+    border-radius: 50%;
+    width: 15%;
+}
+
+.container .profiles > div div h2 {
+    margin-left: 1rem;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--Light-Grayish-Magenta);
+}
+
+.container .profiles > .anne div h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.container .profiles > div div h2 span {
+    font-weight: 400;
+    color: var(--Soft-Pink);
+}
+
+.container .profiles > div p {
+    line-height: 1.4;
+    color: var(--Light-Grayish-Magenta)
+}
+
+@media (max-width:375px) {
+    body {
+        max-width: 100vw;
+        margin: 2rem 0 0 0;
+        overflow: hidden;
+    }
+
+    header picture {
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container {
+        max-width: calc(100vw - 2rem);
+        background-color: var(--White);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container > div:not(.profiles) {
+        width: 100%;
+    }
+
+    .container .text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .container .text h1 {
+        width: 70%;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .container .text p {
+        width: 100%;
+        font-size: 18px;
+        padding: 0 .2rem;
+        margin-top: -.1rem;
+    }
+
+    .container .rating{
+        width: 100%;
+    }
+
+    .container .rating > div{
+        width: 100%;
+        padding: 1rem 0 0 0;
+        margin: 1rem 0;
+        border-radius: .5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .container .rating > div:nth-child(2) {
+        margin-left: 0;
+    }
+
+    .container .rating > div:last-child {
+        margin-left: 0;
+    }
+
+    .container .rating > div img {
+        display: inline;
+        width: 7%;
+        margin-right: .5rem;
+    }
+    
+    .container .rating > div p {
+        margin-left: 0;
+    }
+
+    .container .profiles {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .profiles > div  {
+        width: 100%;
+        height: auto;
+        padding: 2rem 1.5rem 1rem 2rem;
+        background-color: var(--Very-Dark-Magenta);
+        border-radius: .5rem;
+    }
+}
